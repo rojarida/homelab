@@ -80,13 +80,13 @@ Example:
 
 Open virt-manager:
 
-![virt-manager main window](../screenshots/01-virt-manager.png)
+![virt-manager main window](./screenshots/01-virt-manager.png)
 
 ### Create a new virtual machine
 
 Select `Local install media (ISO image or CDROM)`.
 
-![create a new virtual machine](../screenshots/02-create-new-virtual-machine.png)
+![create a new virtual machine](./screenshots/02-create-new-virtual-machine.png)
 
 ### Browse for the ISO
 
@@ -95,7 +95,7 @@ Browse to the ISO and select it.
 virt-manager should automatically detect the operating system you are installing.
     - In this case, we're installing Ubuntu 22.04 LTS
 
-![browse for iso](../screenshots/03-browse-for-iso.png)
+![browse for iso](./screenshots/03-browse-for-iso.png)
 
 ### Choose the Memory and CPU settings
 
@@ -105,7 +105,7 @@ For this build, I used:
     - `Memory`: 4GB
     - `CPUs`: 2
 
-![choose memory and cpu](../screenshots/04-choose-memory-and-cpu.png)
+![choose memory and cpu](./screenshots/04-choose-memory-and-cpu.png)
 
 ### Create the virtual disk
 
@@ -114,7 +114,7 @@ Create the guest storage disk.
 For this VM, I used:
     - `Storage`: 25GB
 
-![create the disk image](../screenshots/05-create-disk-image.png
+![create the disk image](./screenshots/05-create-disk-image.png)
 
 ### Name the VM and Review
 
@@ -122,7 +122,7 @@ Before selecting `Finish`:
     - Give the VM a name
     - Review configurations
 
-![name the virtual machine](../screenshots/06-name-the-virtual-machine.png)
+![name the virtual machine](./screenshots/06-name-the-virtual-machine.png)
 
 ## 7. Once Ubuntu loads
 
@@ -134,11 +134,11 @@ Once it boots from the ISO, the Ubuntu installer should appear.
 
 From here, proceed by selecting `Install Ubuntu`.
 
-![install ubuntu](../screenshots/07-install-ubuntu.png)
+![install ubuntu](./screenshots/07-install-ubuntu.png)
 
 ### Select your keyboard layout
 
-![select keyboard layout](../screenshots/08-select-keyboard-layout.png)
+![select keyboard layout](./screenshots/08-select-keyboard-layout.png)
 
 ### Proceed with normal installation
 
@@ -146,30 +146,30 @@ Proceed with Normal installation.
 
 `Optionally`: Install third-party software for graphics and Wi-Fi hardware and additional media formats
 
-![normal installation](../screenshots/09-normal-installation.png)
+![normal installation](./screenshots/09-normal-installation.png)
 
 ### Erase disk and install Ubuntu
 
 Since this is a VM, we can proceed with erasing the disk and installing Ubuntu.
 
-![erase disk and install](../screenshots/10-erase-disk-and-install.png)
+![erase disk and install](./screenshots/10-erase-disk-and-install.png)
 
 ### Select your timezone
 
 Select your timezone.
 
-![select timezone](../screenshots/11-select-timezone.png)
+![select timezone](./screenshots/11-select-timezone.png)
 
 ### Configure your user
 
 Enter your user account details.
 
-![configure user](../screenshots/12-configure-your-user.png)
+![configure user](./screenshots/12-configure-your-user.png)
 
 ## 8. Reboot
 
-![reboot](../screenshots/13-reboot.png)
+![reboot](./screenshots/13-reboot.png)
 
 Congrats! You've successfully virtualized Ubuntu!
 
-![congrats](../screenshots/14-congrats.png)
+![congrats](./screenshots/14-congrats.png)
