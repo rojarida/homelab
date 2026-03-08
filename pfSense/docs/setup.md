@@ -30,4 +30,3 @@ Before this setup:
 - The Wireless Router would later be converted into an `Access Point`
 
 --
-
