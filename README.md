@@ -98,6 +98,7 @@ Primary homelab server used for virtualization, NAS services, and hosting the pf
 
 Core networking hardware used for routing, switching, and wireless access.
 
+- `Modem`: Arris Touchstone CM8200A
 - `Access Point`: TP-Link Archer AXE95
 - `Switch`: TP-Link TL-SG105 (**unmanaged**)
 - `NIC`: Intel I350-AM2 (dual-port)

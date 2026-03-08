@@ -25,16 +25,23 @@ Deployed `pfSense in a VM` on my Ubuntu Server and used it as the primary router
 
 ---
 
-## Hardware Used
+## Infrastructure Topology
 
-- Dell OptiPlex 7050 SFF (Ubuntu Host)
+### Server
+- Dell OptiPlex 7050 SFF
+- Ubuntu
+- QEMU/KVM
+- virt-manager
+
+### Networking Gear
+- Arris Touchstone CM8200A
 - Intel I350-AM2 (dual-port NIC)
 - TP-Link AXE95 (AP Mode)
 - TP-Link TL-SG105 Switch (unmanaged)
 
 ---
 
-## Network Design Plan
+## Network Topology
 
 ```mermaid
 flowchart LR
