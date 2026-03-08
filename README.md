@@ -117,7 +117,7 @@ Includes:
 - AP Mode Migration
 - Troubleshooting Notes
 
-See: [pfSEnse/README.md](pfsense/README.d)
+See: [pfSense/README.md](pfSense/README.md)
 
 ---
 
