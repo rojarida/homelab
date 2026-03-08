@@ -72,3 +72,34 @@ Core networking hardware used for routing, switching, and wireless access.
     - Dedicated WAN/LAN connectivity for pfSense VM
 
 ---
+
+## Network Design Plan
+
+```mermaid
+flowchart LR
+    ISP[ISP / Modem] --> WAN[pfSense WAN<br/>Public IP via DHCP] 
+    WAN --> PFSENSE[pfSense VM]
+    PFSENSE --> LAN[pfSense LAN<br/>Mgmt IP: 192.168.0.1]
+    LAN --> SWITCH[TL-SG105<br/>Unmanaged Switch]
+    SWITCH --> AP[TP-Link AXE95<br/>AP Mode<br/>Mgmt IP: 192.168.0.2]
+    SWITCH --> HOST[Ubuntu Host<br/>LAN IP: 192.168.0.200]
+    SWITCH --> CLIENTS[LAN Clients<br/>DHCP: 192.168.0.100-199]
+```
+
+### Notes
+- pfSense became the `default gateway` for LAN clients.
+- The all-in-one AXE95 was moved into AP mode only.
+- DHCP for the LAN is handled by pfSense.
+
+- Static IP Addresses:
+    - `Ubuntu Host`: 192.168.0.200
+
+- DHCP Reservations:
+    - `Main Workstation`: 192.168.0.201
+    - `Laptop`: 192.168.0.202
+    - `Main Phone`: 192.168.0.203
+    - `Backup Phone`: 192.168.0.204
+
+---
+
+
