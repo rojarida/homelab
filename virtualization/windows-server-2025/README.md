@@ -33,8 +33,45 @@ Before starting, ensure the following:
 - `Guest OS`: Windows Server 2025 Standard
 - `Install Type`: Desktop Experience
 - `VM Name`: windows-server-2025
-- `Memory`: 4096
-- `CPU`: 2
+- `Memory`: 8192
+- `CPU`: 4
 - `Disk`: 40 GB
 - `Network`: NAT
+
+## 1. Create the Virtual Machine
+
+Open `virt-manager` and create a new virtual machine.
+
+### Create a new virtual machine
+
+Select `Local install media (ISO image or CDROM)`.
+
+### Browse for the ISO
+
+Browse to the ISO and select it.
+
+`virt-manager` should automatically detect the operating system you are installing.
+    - In this case, we're installing Windows Server 2025 but `virt-manager` shows Windows Server 2022, which is the closest match.
+
+### Choose the Memory and CPU settings
+
+Set the VM resources.
+
+For this build, I used:
+    - `Memory`: 8GB
+    - `CPUs`: 4
+
+### Create the virtual disk
+
+Create the storage for the virtual machine.
+
+For this build, I used:
+    - `Storage`: 40GB
+
+### Name the VM and Review
+
+I will be using the `default` network selection.
+
+You can optionally customize configuration before installing; however, we will just proceed.
+
 
