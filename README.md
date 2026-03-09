@@ -14,8 +14,6 @@ The lab is centered around hands-on IT and systems work including:
 - Personal reference for rebuilding and troubleshooting
 - Portfolio of practical infrastructure and networking projects
 
----
-
 ## Overview
 
 My homelab is built around an Ubuntu-based server, a virtualized pfSense router/firewall, local storage services, and a small home network that I can expand over time.
@@ -28,8 +26,6 @@ Current areas of focus:
 - Future VLAN Segmentation
 - Future Managed Switching
 
----
-
 ## Current Network Configuration
 
 - pfSense runs as a VM on the Ubuntu Host
@@ -40,22 +36,6 @@ Current areas of focus:
 - Ubuntu Host: `192.168.0.200`
 - AP Mgmt IP: `192.168.0.2`
 - pfSense Mgmt IP: `192.168.0.1`
-
----
-
-## Repository Structure
-
-```text
-.
-├── pfsense
-│   ├── docs
-│   └── README.md
-└── README.md
-```
-
-> Sample structure for repository. It will grow over time.
-
----
 
 ## Lab Hardware
 
@@ -104,8 +84,6 @@ Core networking hardware used for routing, switching, and wireless access.
 - `NIC`: Intel I350-AM2 (dual-port)
     - Dedicated WAN/LAN connectivity for pfSense VM
 
----
-
 ## Projects
 
 ### pfSense
@@ -120,16 +98,12 @@ Includes:
 
 See: [pfSense/README.md](pfSense/README.md)
 
----
-
 ## Current Priorities
 
 - [x] Configure pfSense VM
 - [x] Migrate AXE95
 - [x] Document homelab hardware
-- [ ] Add pfSense setup documentation
+- [x] Add pfSense setup documentation (See: [pfSense/setup](pfSense/setup/README.md)
 - [ ] Add VPN documentation
 - [ ] Move to managed switching
 - [ ] Plan VLAN segmentation
-
----
