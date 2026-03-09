@@ -103,7 +103,7 @@ See: [pfSense/README.md](pfSense/README.md)
 - [x] Configure pfSense VM
 - [x] Migrate AXE95
 - [x] Document homelab hardware
-- [x] Add pfSense setup documentation (See: [pfSense/setup](pfSense/setup/README.md)
+- [x] Add pfSense setup documentation (See: [pfSense/setup](pfSense/setup/README.md))
 - [ ] Add VPN documentation
 - [ ] Move to managed switching
 - [ ] Plan VLAN segmentation
