@@ -26,16 +26,23 @@ Current areas of focus:
 - Future VLAN Segmentation
 - Future Managed Switching
 
-## Current Network Configuration
+## Network Topology
+```mermaid
+flowchart LR
+    ISP[ISP / Modem<br/>Arris Touchstone CM8200A] --> WAN[pfSense WAN<br/>Public IP via DHCP]
 
-- pfSense runs as a VM on the Ubuntu Host
-- pfSense is the primary LAN gateway
-- AXE95 runs in AP mode
+    subgraph HOSTSYS[Ubuntu Host]
+        PF[pfSense VM]
+    end
 
-- LAN Subnet: `192.168.0.0/24`
-- Ubuntu Host: `192.168.0.200`
-- AP Mgmt IP: `192.168.0.2`
-- pfSense Mgmt IP: `192.168.0.1`
+    WAN --> PF
+    PF --> LAN[pfSense LAN<br/>Gateway: 192.168.0.1/24]
+    LAN --> SW[TP-Link TL-SG105<br/>Unmanaged Switch]
+
+    SW --> UBUNTU[Ubuntu Host LAN<br/>Static IP: 192.168.0.200]
+    SW --> AP[TP-Link AXE95<br/>AP Mode<br/>Mgmt IP: 192.168.0.2]
+    SW --> CLIENTS[LAN Clients<br/>DHCP: 192.168.0.100-199]
+```
 
 ## Lab Hardware
 
