@@ -8,6 +8,8 @@ This README functions as both:
 - A personal reference for rebuilding/troubleshooting
 - A homelab project write-up
 
+For a generic pfSense installation as a VM, see: [pfSense Setup](./setup/README.md)
+
 ---
 
 ## Overview
