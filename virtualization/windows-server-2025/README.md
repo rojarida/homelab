@@ -20,7 +20,7 @@ This setup focuses only on getting a basic standalone Windows Server 2025 VM ins
 
 Before starting, ensure the following:
 
-- QEMU/KVM is installed on the host (see: [steps 1 - 4](../ubuntu-vm/README.md#1-update-the-host))
+- QEMU/KVM is installed on the host (see: [steps 1 - 4](../ubuntu/README.md#1-update-the-host))
 - virt-manager is installed
 - Virtualization is enabled
 - Windows Server 2025 is downloaded
