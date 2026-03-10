@@ -103,14 +103,24 @@ Includes:
 - AP Mode Migration
 - Troubleshooting Notes
 
-See: [pfSense/README.md](pfSense/README.md)
+See: [pfSense](pfSense/README.md) [pfSense Setup](pfSense/setup/README.md)
 
-## Current Priorities
+### Ubuntu
+Complete walkthrough on virtualizing Ubuntu.
 
-- [x] Configure pfSense VM
-- [x] Migrate AXE95
-- [x] Document homelab hardware
-- [x] Add pfSense setup documentation (See: [pfSense/setup](pfSense/setup/README.md))
-- [ ] Add VPN documentation
-- [ ] Move to managed switching
-- [ ] Plan VLAN segmentation
+Includes:
+- QEMU/KVM and virt-manager installation
+- Full Ubuntu LTS VM setup
+- Screenshots included
+
+See: [Ubuntu Setup](virtualization/ubuntu/README.md)
+
+### Windows Server 2025
+Complete walkthrough on virtualizing Windows Server 2025.
+
+Includes:
+- Full Windows Server VM setup
+- Screenshots included
+- Does not go over Active Directory, DNS, DHCP, or Group Policy
+
+See: [Windows Server 2025 Setup](virtualization/windows-server-2025/README.md)
