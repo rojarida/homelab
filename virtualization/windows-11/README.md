@@ -14,7 +14,8 @@ For this setup, I will keep configuration simple and focus on:
 - Post-install verification
 - Screenshots and documentation
 
-This setup focuses only on getting a basic installation of Windows 11 VM installed and working.
+> [!note]
+> This setup focuses only on getting a basic installation of Windows 11 VM installed and working.
 
 ## Prerequisites
 
@@ -86,7 +87,7 @@ Before starting, ensure the following:
 
 ### Select Image
 
-- They're different versions of Windows 11. I will briefly describe each version.
+They're different versions of Windows 11. I will briefly describe each version.
 
 > [!note]
 > Images that have `N` are equivalent to the edition (e.g. Home and Home N), but doesn't come with pre-installed media-related technologies.
@@ -112,6 +113,61 @@ Before starting, ensure the following:
 
 ### Windows will not install
 
-- This might take some time. Wait until it's fully complete and **DO NOT** shutdown.
+- This might take some time.
 
+> [!warning]
+> Do not shutdown.
 
+## 3. Continue with Windows installation
+
+### Select country or region
+
+### Select keyboard layout or input method
+
+### Option to add second keyboard layout
+
+### Name your device
+
+### Set up for personal or organization
+
+> [!note] 
+> Depending on the project, select the appropriate type.
+
+- We will continue `Set up for personal use`.
+
+### Windows will now download
+
+- This will take some time.
+
+> [!warning]
+> Do not shutdown.
+
+### Unlock your Microsoft experience
+
+- In this setup, I will be logging into a Microsoft account to show the complete process.
+
+### Create a PIN
+
+### Choose privacy settings
+
+- Select the settings and Accept
+
+### Getting things ready for you.
+
+### Customize your experience
+
+- I will be selecting `Skip` here.
+
+### Use your phone from your PC
+
+I will not be showing a screenshot for this screen.
+
+### Always have access to your recent browsing data
+
+### Microsoft 365 promotions
+
+### Use Microsoft 365 for free
+
+## Congratulations!
+
+- You've successfully set up a clean virtual machine installation of Windows 11.
