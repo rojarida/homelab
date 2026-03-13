@@ -42,9 +42,12 @@ Before starting, ensure the following:
 
 - Open `virt-manager` and create a new virtual machine.
 
+
 ### Create a new virtual machine
 
 - Select `Local install media (ISO image or CDROM)`
+
+![create virtual machine](./screenshots/01-create-virtual-machine.png)
 
 ### Browse for the ISO
 
@@ -52,17 +55,29 @@ Before starting, ensure the following:
 - `virt-manager` should automatically detect the operating system you are installing.
     - In this case, we're installing Microsoft Windows 11.
 
+![select the iso](./screenshots/02-select-the-iso.png)
+
 ### Choose the Memory and CPU settings
 
 - Set the VM resources.
+
+![choose memory and cpu](./screenshots/03-choose-memory-and-cpu.png)
 
 ### Create the virtual disk
 
 - Create a disk image for the virtual machine.
 
+![create virtual disk](./screenshots/04-create-virtual-disk.png)
+
 ### Name the VM and Review
 
 - The network selection will be dependent on the use for the client.
+
+![review vm](./screenshots/05-review-vm.png)
+
+### If you run into this screen, press any key.
+
+![press any key](./screenshots/06-press-any-key.png)
 
 ## 2. Once Windows loads
 
@@ -71,7 +86,11 @@ Before starting, ensure the following:
 
 ### Select language settings
 
+![select language settings](./screenshots/07-select-language-settings.png)
+
 ### Select keyboard settings
+
+![select keyboard settings](./screenshots/08-select-keyboard-settings.png)
 
 ### Select setup option
 
@@ -79,11 +98,15 @@ Before starting, ensure the following:
 
 - Select `Install Windows 11` and make sure `I agree everything will be deleted including files, apps, and settings` is checked.
 
+![select setup option](./screenshots/09-select-setup-option.png)
+
 ### Product key
 
 - Since this is a client VM, we won't be needing a product key.
 
 - At the bottom, select `I don't have a product key`
+
+![product key](./screenshots/10-product-key.png)
 
 ### Select Image
 
@@ -99,17 +122,25 @@ They're different versions of Windows 11. I will briefly describe each version.
 - `Windows 11 Pro Education`: A professional-based edition for schools and academic environments.
 - `Windows 11 Pro for Workstations`: Built for high-performance hardware and demanding workloads like CAD, 3D animation, data science, and more.
 
+![select image](./screenshots/11-select-image.png)
+
 ### Applicable notices and license terms
 
 - Accept the software license terms.
+
+![license terms](./screenshots/12-license-terms.png)
 
 ### Select location to install Windows 11
 
 - Since this is a fresh VM, we will use the virtual disk. Select `Disk 0 Unallocated Space` and press Next.
 
+![select location for windows 11](./screenshots/13-select-location-for-w11.png)
+
 ### Ready to install
 
 - Review the configuration and ensure you're installing the Windows image you want.
+
+![ready to install](./screenshots/14-ready-to-install.png)
 
 ### Windows will not install
 
@@ -118,15 +149,30 @@ They're different versions of Windows 11. I will briefly describe each version.
 > [!warning]
 > Do not shutdown.
 
+![installing windows](./screenshots/15-installing-windows.png)
+
 ## 3. Continue with Windows installation
 
 ### Select country or region
 
+![select country](./screenshots/16-select-country.png)
+
 ### Select keyboard layout or input method
+
+![select keyboard layout](./screenshots/17-select-keyboard-layout.png)
 
 ### Option to add second keyboard layout
 
+![second keyboard layout](./screenshots/18-second-keyboard-layout.png)
+
 ### Name your device
+
+- I will be naming the device `lab-client-01`.
+
+> [!note]
+> This is different from the virtual machine name.
+
+![name your device](./screenshots/19-name-your-device.png)
 
 ### Set up for personal or organization
 
@@ -135,6 +181,8 @@ They're different versions of Windows 11. I will briefly describe each version.
 
 - We will continue `Set up for personal use`.
 
+![set up device](./screenshots/20-set-up-device.png)
+
 ### Windows will now download
 
 - This will take some time.
@@ -142,21 +190,39 @@ They're different versions of Windows 11. I will briefly describe each version.
 > [!warning]
 > Do not shutdown.
 
+![downloading steps](./screenshots/21-downloading-steps.png)
+
 ### Unlock your Microsoft experience
 
-- In this setup, I will be logging into a Microsoft account to show the complete process.
+![microsoft experience](./screenshots/22-microsoft-experience.png)
+
+### Add your Microsoft account
+
+- I will be logging in to a Microsoft account to show the complete set up process.
+
+![add microsoft account](./screenshots/23-add-microsoft-account.png)
 
 ### Create a PIN
+
+![create a pin](./screenshots/24-create-a-pin.png)
 
 ### Choose privacy settings
 
 - Select the settings and Accept
 
+![privacy settings](./screenshots/25-privacy-settings.png)
+
 ### Getting things ready for you.
+
+- Almost there!
+
+![getting things ready](./screenshots/26-getting-things-ready.png)
 
 ### Customize your experience
 
 - I will be selecting `Skip` here.
+
+![customize experience](./screenshots/27-customize-experience.png)
 
 ### Use your phone from your PC
 
@@ -164,10 +230,20 @@ I will not be showing a screenshot for this screen.
 
 ### Always have access to your recent browsing data
 
+![recent browsing data](./screenshots/28-access-to-browsing-data.png)
+
 ### Microsoft 365 promotions
 
+![microsoft 365 trial](./screenshots/29-microsoft-365-trial.png)
+![more cloud storage](./screenshots/30-more-cloud-storage.png)
+![game pass premium](./screenshots/32-game-pass.png)
+
 ### Use Microsoft 365 for free
+
+![use microsoft 365 for free](./screenshots/31-use-microsoft-365-for-free.png)
 
 ## Congratulations!
 
 - You've successfully set up a clean virtual machine installation of Windows 11.
+
+![windows 11 desktop](./screenshots/33-desktop.png)
