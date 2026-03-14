@@ -13,9 +13,9 @@ At this point, the environment should have the following:
 
 Before continuing, complete the following:
 
-- [Windows Server 2025 Setup](../../../../../../virtualization/windows-server-2025/README.md)
+- [Windows Server 2025 Setup](../../../../../virtualization/windows-server-2025/README.md)
 - [Active Directory Setup](../README.md)
-- [Windows 11 VM Setup](../../../../../../virtualization/windows-11/README.md)
+- [Windows 11 VM Setup](../../../../../virtualization/windows-11/README.md)
 
 ## Verify your environment state
 
