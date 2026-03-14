@@ -102,7 +102,7 @@ This is the naming scheme I will be using:
 ## Documentation Notes
 
 - `docs/setup.md`: Initial environment preparation
-- `docs/active-directory.md`: Promoting the server and configuring AD DS
+- [docs/active-directory.md](./active-directory.md): Promoting the server and configuring AD DS
 - `docs/windows-client.md`: Joining the Windows 11 VM to the domain
 - `docs/group-policy.md`: Testing and documenting policy changes
 - `docs/troubleshooting`: Issues, fixes, and lessons learned
