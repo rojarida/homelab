@@ -42,3 +42,5 @@ This project is focused on:
 This lab is meant for testing and learning. It is not intended for production use on home network.
 
 ## Documentation
+
+![Enterprise Simulation Setup](./docs/setup.md)
