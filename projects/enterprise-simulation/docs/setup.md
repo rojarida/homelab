@@ -37,4 +37,9 @@ The workflow is:
 > [!note]
 > This project is for lab use only. It is not intended to be deployed directly onto the home network.
 
+## Prerequisites
 
+Before continuing, complete the following baseline VM setup guides:
+
+- [Windows Server 2025 Setup](../../../virtualization/windows-server-2025/README.md)
+- [Windows 11 VM Setup](../../../virtualization/
