@@ -26,9 +26,9 @@ Before continuing, confirm the following:
 
     ![server manager](../screenshots/active-directory/01-server-manager.png)
 
-    - Once there, take note of the `Computer name`. If you haven't changed it, now would be a good time.
-        1. Click on the name of the computer.
-        2. Then select `Change` to rename this computer.
+- Once there, take note of the `Computer name`. If you haven't changed it, now would be a good time.
+    1. Click on the name of the computer.
+    2. Then select `Change` to rename this computer.
 
     ![system properties](../screenshots/active-directory/02-system-properties.png)
 
@@ -66,86 +66,87 @@ Before continuing, confirm the following:
 
 ## Install the Active Directory Domain Services
 
-1. Open Server Manager.
+### 1. Open Server Manager.
 
-2. In the top right, select `Manage` and then `Add Roles and Features`.
+### 2. In the top right, select `Manage` and then `Add Roles and Features`.
 
-    ![add roles and features](../screenshots/active-directory/08-add-roles-and-features.png)
+![add roles and features](../screenshots/active-directory/08-add-roles-and-features.png)
 
-3. Click `Next` on the opening page.
+### 3. Click `Next` on the opening page.
 
-    ![before you begin](../screenshots/active-directory/09-before-you-begin.png)
+![before you begin](../screenshots/active-directory/09-before-you-begin.png)
 
-4. For the installation type, select `Role-based or featured-based installation` and then click `Next`.
+### 4. For the installation type, select `Role-based or featured-based installation` and then click `Next`.
 
-    ![select installation type](../screenshots/active-directory/10-installation-type.png)
+![select installation type](../screenshots/active-directory/10-installation-type.png)
 
-5. Select the local server and then click `Next`.
+### 5. Select the local server and then click `Next`.
 
-    ![select destination server](../screenshots/active-directory/11-server-selection.png)
+![select destination server](../screenshots/active-directory/11-server-selection.png)
 
-6. On Server Roles, check `Active Directory Domain Services`.
+### 6. On Server Roles, check `Active Directory Domain Services`.
 
-    ![check active directory domain services](../screenshots/active-directory/12-select-ad-ds.png)
+![check active directory domain services](../screenshots/active-directory/12-select-ad-ds.png)
 
-7. Then select `Add features` on the window that pops up.
+### 7. Then select `Add features` on the window that pops up.
 
-    ![add adds features](../screenshots/active-directory/13-ad-features.png)
+![add adds features](../screenshots/active-directory/13-ad-features.png)
 
-8. Once `Active Directory Domain Services` is checked, click `Next`.
+### 8. Once `Active Directory Domain Services` is checked, click `Next`.
 
-9. For features, default is fine. Click `Next`.
+### 9. For features, default is fine. Click `Next`.
 
-    ![select features](../screenshots/active-directory/14-select-features.png)
+![select features](../screenshots/active-directory/14-select-features.png)
 
-10. On `Active Directory Domain Services`, click `Next`.
+### 10. On `Active Directory Domain Services`, click `Next`.
 
-    ![active directory domain services](../screenshots/active-directory/15-active-directory-domain-services.png)
+![active directory domain services](../screenshots/active-directory/15-active-directory-domain-services.png)
 
-11. On `Confirm installation selections`, click `Install`.
+### 11. On `Confirm installation selections`, click `Install`.
 
-    ![confirm installation selections](../screenshots/active-directory/16-confirm-installation-selections.png)
+![confirm installation selections](../screenshots/active-directory/16-confirm-installation-selections.png)
 
-12. Once `Active Directory Domain Services` installed successsfuly, click `Close`.
+### 12. Once `Active Directory Domain Services` installed successsfuly, click `Close`.
 
-    ![adds installed](../screenshots/active-directory/17-ad-ds-installation-succeeded.png)
+![adds installed](../screenshots/active-directory/17-ad-ds-installation-succeeded.png)
 
-13. Click the flag with the yellow triangle in the top right of `Server Manager`.
+### 13. Click the flag with the yellow triangle in the top right of `Server Manager`.
 
-14. Select `Promote this server to a domain controller`.
+### 14. Select `Promote this server to a domain controller`.
 
-    ![select flag with yellow triangle](../screenshots/active-directory/18-click-flag-yellow-triangle.png)
+![select flag with yellow triangle](../screenshots/active-directory/18-click-flag-yellow-triangle.png)
 
-15. Select `Add a new forest`.
+### 15. Select `Add a new forest`.
 
-16. Enter a `Root domain name`. I will be using `corp.example.com`. Click `Next`.
-    - Avoid using `.local` as it may conflict with multicast DNS.
-    
-    ![deployment configuration](../screenshots/active-directory/19-root-domain-name.png)
+### 16. Enter a `Root domain name`. I will be using `corp.example.com`. Click `Next`.
+> [!warning]
+> Avoid using `.local` as it may conflict with multicast DNS.
 
-17. On `Domain Controller Options`, default is fine. Create your password, then click `Next`.
+![deployment configuration](../screenshots/active-directory/19-root-domain-name.png)
 
-    ![domain controller options](../screenshots/active-directory/20-domain-controller-options.png)
+### 17. On `Domain Controller Options`, default is fine. Create your password, then click `Next`.
 
-18. Leave `DNS delegation` unchecked, then click `Next`.
+![domain controller options](../screenshots/active-directory/20-domain-controller-options.png)
 
-    ![dns options](../screenshots/active-directory/21-dns-delegation.png)
+### 18. Leave `DNS delegation` unchecked, then click `Next`.
 
-19. Verify the NetBIOS domain name. I will be using `CORP`. Click `Next`.
+![dns options](../screenshots/active-directory/21-dns-delegation.png)
 
-    ![netbios domain name](../screenshots/active-directory/22-netbios-domain-name.png)
+### 19. Verify the NetBIOS domain name. I will be using `CORP`. Click `Next`.
 
-20. On `Paths`, default is fine. Click `Next`.
+![netbios domain name](../screenshots/active-directory/22-netbios-domain-name.png)
 
-    ![adds paths](../screenshots/active-directory/23-ad-ds-paths.png)
+### 20. On `Paths`, default is fine. Click `Next`.
 
-21. Review the options, then click `Next`.
+![adds paths](../screenshots/active-directory/23-ad-ds-paths.png)
 
-    ![review options](../screenshots/active-directory/24-review-options.png)
+### 21. Review the options, then click `Next`.
 
-22. On `Prerequisites Check`, click `Install`.
+![review options](../screenshots/active-directory/24-review-options.png)
 
-    ![prerequisites check](../screenshots/active-directory/25-prerequisites-check.png)
+### 22. On `Prerequisites Check`, click `Install`.
+
+![prerequisites check](../screenshots/active-directory/25-prerequisites-check.png)
 
 ## Log into domain Administrator account
 
