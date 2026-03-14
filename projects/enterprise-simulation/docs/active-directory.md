@@ -49,4 +49,32 @@ Before continuing, confirm the following:
     - Default gateway: leave blank for now
     - Preferred DNS server: `192.168.40.10` (the IP address of the server)
 
+## Install the Active Directory Domain Services
 
+1. Open Server Manager.
+2. In the top right, select `Manage` and then `Add Roles and Features`.
+3. Click `Next` on the opening page.
+4. For the installation type, select `Role-based or featured-based installation` and then click `Next`.
+5. Select the local server and then click `Next`.
+6. On Server Roles, check `Active Directory Domain Services`.
+7. Then select `Add features` on the window that pops up.
+8. Once `Active Directory Domain Services` is checked, click `Next`.
+9. For features, default is fine. Click `Next`.
+10. On `Active Directory Domain Services`, click `Next`.
+11. On `Confirm installation selections`, click `Install`.
+12. Once `Active Directory Domain Services` installed successsfuly, click `Close`.
+13. Click the flag with the yellow triangle in the top right of `Server Manager`.
+14. Select `Promote this server to a domain controller`.
+15. Select `Add a new forest`.
+16. Enter a `Root domain name`. I will be using `corp.example.com`. Click `Next`.
+    - Avoid using `.local` as it may conflict with multicast DNS.
+17. On `Domain Controller Options`, default is fine. Create your password, then click `Next`.
+18. Leave `DNS delegation` unchecked, then click `Next`.
+19. Verify the NetBIOS domain name. I will be using `CORP`. Click `Next`.
+20. On `Paths`, default is fine. Click `Next`.
+21. Review the options, then click `Next`.
+22. On `Prerequisites Check`, click `Install`.
+
+## Log into domain Administrator account
+
+After you installed Active Directory Domain Services, you should see the domain you selected followed by the built-in Administrator account. This is the same account that you used previously, it's now joined to the domain.
