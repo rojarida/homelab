@@ -135,5 +135,5 @@ Includes:
 
 See: 
 1. [Windows 11 Setup](virtualization/windows-11/README.md)
-2. [Joining W11 VM to Domain](projects/enterprise-simulation/docs/w11-join-domain.md)
+2. [Joining W11 VM to Domain](./projects/enterprise-simulation/docs/active-directory/tasks/w11-join-domain.md)
 

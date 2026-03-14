@@ -174,3 +174,8 @@ After you installed Active Directory Domain Services, you should see the domain 
 ## Congratulations!
 
 You've successfully configured Active Directory Domain Services and promoted the Windows Server VM to a domain controller for the `corp.example.com` enterprise simulation lab. The server can now provide centralized identity and directory services for the isolated environment.
+
+## Related
+
+- [Join a Windows 11 client](./tasks/
+- [Create a domain user](./tasks/create-user.md)

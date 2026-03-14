@@ -33,4 +33,4 @@ We will perform Option 2.
 
 2. Type `ncpa.cpl`. (NCPA is Network Control Panel Applet)
 
-3. The steps for setting a static IP address can be replicated in steps 3 - 5 [here.](./active-directory.md/#3-set-a-static-ip-address)
+3. The steps for setting a static IP address can be replicated in steps 3 - 5 [here.](./active-directory/README.md/#3-set-a-static-ip-address)
