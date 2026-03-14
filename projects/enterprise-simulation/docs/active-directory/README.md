@@ -24,21 +24,21 @@ Before continuing, confirm the following:
 
 1. In the Server Manager, click on `Local Server`.
 
-    ![server manager](../screenshots/active-directory/01-server-manager.png)
+    ![server manager](../../screenshots/active-directory/01-server-manager.png)
 
 - Once there, take note of the `Computer name`. If you haven't changed it, now would be a good time.
     1. Click on the name of the computer.
     2. Then select `Change` to rename this computer.
 
-    ![system properties](../screenshots/active-directory/02-system-properties.png)
+    ![system properties](../../screenshots/active-directory/02-system-properties.png)
 
     3. Change the computer name. You must restart the server for settings to take effect.
 
-    ![change computer name](../screenshots/active-directory/03-computer-name-domain-change.png)
+    ![change computer name](../../screenshots/active-directory/03-computer-name-domain-change.png)
 
 2. Beside Ethernet: select `IPv4 address assigned by DHCP, IPv6 enabled`
 
-    ![select ethernet](../screenshots/active-directory/04-select-ethernet.png)
+    ![select ethernet](../../screenshots/active-directory/04-select-ethernet.png)
 
     - Troubleshooting
         1. Shut down the server
@@ -48,11 +48,11 @@ Before continuing, confirm the following:
 
 3. Right click on the adapter and select `Properties`.
 
-    ![right click adapter](../screenshots/active-directory/05-right-click-adapter.png)
+    ![right click adapter](../../screenshots/active-directory/05-right-click-adapter.png)
 
 4. Select `Internet Protocol Version 4 (TCP/IPv4)` and click on `Properties`.
 
-    ![click on ipv4](../screenshots/active-directory/06-select-ipv4.png)
+    ![click on ipv4](../../screenshots/active-directory/06-select-ipv4.png)
 
 5. Because this is a Server, we want it to have a static IP address. The isolated virtual network I'm using is `192.168.40.0/24`.
 
@@ -62,7 +62,7 @@ Before continuing, confirm the following:
     - Default gateway: leave blank for now
     - Preferred DNS server: `192.168.40.10` (the IP address of the server)
 
-    ![set static ip](../screenshots/active-directory/07-set-static-ip.png)
+    ![set static ip](../../screenshots/active-directory/07-set-static-ip.png)
 
 ## Install the Active Directory Domain Services
 
@@ -70,51 +70,51 @@ Before continuing, confirm the following:
 
 ### 2. In the top right, select `Manage` and then `Add Roles and Features`.
 
-![add roles and features](../screenshots/active-directory/08-add-roles-and-features.png)
+![add roles and features](../../screenshots/active-directory/08-add-roles-and-features.png)
 
 ### 3. Click `Next` on the opening page.
 
-![before you begin](../screenshots/active-directory/09-before-you-begin.png)
+![before you begin](../../screenshots/active-directory/09-before-you-begin.png)
 
 ### 4. For the installation type, select `Role-based or featured-based installation` and then click `Next`.
 
-![select installation type](../screenshots/active-directory/10-installation-type.png)
+![select installation type](../../screenshots/active-directory/10-installation-type.png)
 
 ### 5. Select the local server and then click `Next`.
 
-![select destination server](../screenshots/active-directory/11-server-selection.png)
+![select destination server](../../screenshots/active-directory/11-server-selection.png)
 
 ### 6. On Server Roles, check `Active Directory Domain Services`.
 
-![check active directory domain services](../screenshots/active-directory/12-select-ad-ds.png)
+![check active directory domain services](../../screenshots/active-directory/12-select-ad-ds.png)
 
 ### 7. Then select `Add features` on the window that pops up.
 
-![add adds features](../screenshots/active-directory/13-ad-features.png)
+![add adds features](../../screenshots/active-directory/13-ad-features.png)
 
 ### 8. Once `Active Directory Domain Services` is checked, click `Next`.
 
 ### 9. For features, default is fine. Click `Next`.
 
-![select features](../screenshots/active-directory/14-select-features.png)
+![select features](../../screenshots/active-directory/14-select-features.png)
 
 ### 10. On `Active Directory Domain Services`, click `Next`.
 
-![active directory domain services](../screenshots/active-directory/15-active-directory-domain-services.png)
+![active directory domain services](../../screenshots/active-directory/15-active-directory-domain-services.png)
 
 ### 11. On `Confirm installation selections`, click `Install`.
 
-![confirm installation selections](../screenshots/active-directory/16-confirm-installation-selections.png)
+![confirm installation selections](../../screenshots/active-directory/16-confirm-installation-selections.png)
 
 ### 12. Once `Active Directory Domain Services` installed successsfuly, click `Close`.
 
-![adds installed](../screenshots/active-directory/17-ad-ds-installation-succeeded.png)
+![adds installed](../../screenshots/active-directory/17-ad-ds-installation-succeeded.png)
 
 ### 13. Click the flag with the yellow triangle in the top right of `Server Manager`.
 
 ### 14. Select `Promote this server to a domain controller`.
 
-![select flag with yellow triangle](../screenshots/active-directory/18-click-flag-yellow-triangle.png)
+![select flag with yellow triangle](../../screenshots/active-directory/18-click-flag-yellow-triangle.png)
 
 ### 15. Select `Add a new forest`.
 
@@ -122,37 +122,37 @@ Before continuing, confirm the following:
 > [!warning]
 > Avoid using `.local` as it may conflict with multicast DNS.
 
-![deployment configuration](../screenshots/active-directory/19-root-domain-name.png)
+![deployment configuration](../../screenshots/active-directory/19-root-domain-name.png)
 
 ### 17. On `Domain Controller Options`, default is fine. Create your password, then click `Next`.
 
-![domain controller options](../screenshots/active-directory/20-domain-controller-options.png)
+![domain controller options](../../screenshots/active-directory/20-domain-controller-options.png)
 
 ### 18. Leave `DNS delegation` unchecked, then click `Next`.
 
-![dns options](../screenshots/active-directory/21-dns-delegation.png)
+![dns options](../../screenshots/active-directory/21-dns-delegation.png)
 
 ### 19. Verify the NetBIOS domain name. I will be using `CORP`. Click `Next`.
 
-![netbios domain name](../screenshots/active-directory/22-netbios-domain-name.png)
+![netbios domain name](../../screenshots/active-directory/22-netbios-domain-name.png)
 
 ### 20. On `Paths`, default is fine. Click `Next`.
 
-![adds paths](../screenshots/active-directory/23-ad-ds-paths.png)
+![adds paths](../../screenshots/active-directory/23-ad-ds-paths.png)
 
 ### 21. Review the options, then click `Next`.
 
-![review options](../screenshots/active-directory/24-review-options.png)
+![review options](../../screenshots/active-directory/24-review-options.png)
 
 ### 22. On `Prerequisites Check`, click `Install`.
 
-![prerequisites check](../screenshots/active-directory/25-prerequisites-check.png)
+![prerequisites check](../../screenshots/active-directory/25-prerequisites-check.png)
 
 ## Log into domain Administrator account
 
 After you installed Active Directory Domain Services, you should see the domain you selected followed by the built-in Administrator account. This is the same account that you used previously, it's now joined to the domain.
 
-![domain administrator account](../screenshots/active-directory/26-after-ad-ds-installs.png)
+![domain administrator account](../../screenshots/active-directory/26-after-ad-ds-installs.png)
 
 ## Verify
 
@@ -160,7 +160,7 @@ After you installed Active Directory Domain Services, you should see the domain 
 
 2. Confirm the hostname is still the same. You should see that `WORKGROUP` changed into `Domain` and has the Root domain name that you created.
 
-    ![verify hostname and domain](../screenshots/active-directory/27-verify-server-and-domain.png)
+    ![verify hostname and domain](../../screenshots/active-directory/27-verify-server-and-domain.png)
 
 3. On command prompt, run `ipconfig /all`. You should notice a couple of things:
     - Host name: The hostname configured
@@ -169,7 +169,7 @@ After you installed Active Directory Domain Services, you should see the domain 
     - Subnet Mask: `255.255.255.0` (/24)
     - NetBIOS over TCPIP: `Enabled`
 
-    ![verify network settings](../screenshots/active-directory/28-verify-network-settings.png)
+    ![verify network settings](../../screenshots/active-directory/28-verify-network-settings.png)
 
 ## Congratulations!
 
