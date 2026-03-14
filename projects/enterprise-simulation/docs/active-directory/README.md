@@ -177,5 +177,5 @@ You've successfully configured Active Directory Domain Services and promoted the
 
 ## Related
 
-- [Join a Windows 11 client](./tasks/
+- [Join a Windows 11 client](./tasks/w11-join-domain.md)
 - [Create a domain user](./tasks/create-user.md)
