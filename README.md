@@ -98,7 +98,9 @@ Includes:
 - AP Mode Migration
 - Troubleshooting Notes
 
-See: [pfSense](pfSense/README.md) [pfSense Setup](pfSense/setup/README.md)
+See: 
+1. [pfSense](pfSense/README.md) 
+2. [pfSense Setup](pfSense/setup/README.md)
 
 ### Ubuntu
 Complete walkthrough on virtualizing Ubuntu.
@@ -108,14 +110,29 @@ Includes:
 - Full Ubuntu LTS VM setup
 - Screenshots included
 
-See: [Ubuntu Setup](virtualization/ubuntu/README.md)
+See: 
+1. [Ubuntu Setup](virtualization/ubuntu/README.md)
 
 ### Windows Server 2025
 Complete walkthrough on virtualizing Windows Server 2025.
 
 Includes:
 - Full Windows Server VM setup
+- Separate Active Directory documentation
 - Screenshots included
-- Does not go over Active Directory, DNS, DHCP, or Group Policy
 
-See: [Windows Server 2025 Setup](virtualization/windows-server-2025/README.md)
+See: 
+1. [Windows Server 2025 Setup](virtualization/windows-server-2025/README.md)
+2. [Active Directory](projects/enterprise-simulation/docs/active-directory.md)
+
+### Windows 11 VM
+Complete walkthrough on virtualizing Windows 11.
+
+Includes:
+- QEMU/KVM and virt-manager installation
+- Clean Windows 11 Installation
+- Screenshots included
+
+See: 
+1. [Windows 11 Setup](virtualization/windows-11/README.md)
+
