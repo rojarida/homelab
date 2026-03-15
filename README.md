@@ -125,6 +125,7 @@ See:
 1. [Windows Server 2025 Setup](./virtualization/windows-server-2025/README.md)
 2. [Active Directory](./projects/enterprise-simulation/active-directory/README.md)
 3. [Creating a Domain User](./projects/enterprise-simulation/active-directory/tasks/create-user.md)
+4. [Configuring pfSense for Enterprise Simulation](./projects/enterprise-simulation/pfSense/README.md)
 
 ### Windows 11 VM
 Complete walkthrough on virtualizing Windows 11.
