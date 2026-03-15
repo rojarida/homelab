@@ -123,7 +123,8 @@ Includes:
 
 See: 
 1. [Windows Server 2025 Setup](virtualization/windows-server-2025/README.md)
-2. [Active Directory](projects/enterprise-simulation/docs/active-directory.md)
+2. [Active Directory](projects/enterprise-simulation/docs/active-directory/README.md)
+3. [Creating a Domain User](projects/enterprise-simulation/docs/active-directory/tasks/create-user.md)
 
 ### Windows 11 VM
 Complete walkthrough on virtualizing Windows 11.
