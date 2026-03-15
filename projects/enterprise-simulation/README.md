@@ -39,8 +39,5 @@ This project is focused on:
 - Joining Windows Clients to domain
 - Basic internal enterprise simulation
 
-This lab is meant for testing and learning. It is not intended for production use on home network.
-
-## Documentation
-
-![Enterprise Simulation Setup](./docs/setup.md)
+> [!note]
+> This lab is meant for testing and learning. It is not intended for production use on home network.

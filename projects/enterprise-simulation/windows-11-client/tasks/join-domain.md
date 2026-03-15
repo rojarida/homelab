@@ -13,9 +13,9 @@ At this point, the environment should have the following:
 
 Before continuing, complete the following:
 
-- [Windows Server 2025 Setup](../../../../../virtualization/windows-server-2025/README.md)
-- [Active Directory Setup](../README.md)
-- [Windows 11 VM Setup](../../../../../virtualization/windows-11/README.md)
+- [Windows Server 2025 Setup](../../../../virtualization/windows-server-2025/README.md)
+- [Active Directory Setup](../../active-directory/README.md)
+- [Windows 11 VM Setup](../../../../virtualization/windows-11/README.md)
 
 ## Verify your environment state
 
@@ -39,37 +39,37 @@ Verify:
 
 - Client has an IP on the same lab network (`192.168.40.0/24`).
 
-![verify network settings](../../../screenshots/w11-join-domain/01-verify-network-settings.png)
+![verify network settings](./screenshots/w11-join-domain/01-verify-network-settings.png)
 
 - DNS Server is set to the domain controller's IP.
 - Client can ping the server by IP.
 - Client should be able to ping the server by hostname.
 
-![test server connectivity](../../../screenshots/w11-join-domain/02-verify-connectivity.png)
+![test server connectivity](./screenshots/w11-join-domain/02-verify-connectivity.png)
 
 ## 2. Open the domain join settings
 
 ### Right click the start menu and select `Settings`.
 
-![open settings](../../../screenshots/w11-join-domain/03-settings.png)
+![open settings](./screenshots/w11-join-domain/03-settings.png)
 
 ### Go to `System`.
 
-![open system](../../../screenshots/w11-join-domain/04-system.png)
+![open system](./screenshots/w11-join-domain/04-system.png)
 
 ### Scroll down and select `About`.
 
 ### Then under `Device specifications`, scroll down and select `Domain or workgroup`.
 
-![select domain or workgroup](../../../screenshots/w11-join-domain/05-domain-or-workgroup.png)
+![select domain or workgroup](./screenshots/w11-join-domain/05-domain-or-workgroup.png)
 
 ### To change the domain, select `Change`.
 
-![change domain](../../../screenshots/w11-join-domain/06-system-properties.png)
+![change domain](./screenshots/w11-join-domain/06-system-properties.png)
 
 ### Then at the bottom, change `Member of.. Domain:` to the domain name when creating the Windows Server.
 
-![member of domain](../../../screenshots/w11-join-domain/07-member-of-domain.png)
+![member of domain](./screenshots/w11-join-domain/07-member-of-domain.png)
 
 It will then ask you for an account with permission to join the domain. Log in with your Windows Server administrator account.
 
@@ -77,11 +77,11 @@ In my case:
 - Username: `CORP\Administrator`
 - Password: `...`
 
-![account with permissions](../../../screenshots/w11-join-domain/08-account-with-permission.png)
+![account with permissions](./screenshots/w11-join-domain/08-account-with-permission.png)
 
 After authenticating, you should be welcomed to the domain.
 
-![domain welcome message](../../../screenshots/w11-join-domain/09-successful-domain-join.png)
+![domain welcome message](./screenshots/w11-join-domain/09-successful-domain-join.png)
 
 ## 3. Reboot the Windows 11 VM
 
@@ -91,7 +91,7 @@ You should now be able to join a domain account. Since we haven't configured any
 
 In the bottom left, select `Other user`. Notice how it shows your NetBIOS name. Ensure you prepend this when typing in your username.
 
-[domain login](../../../screenshots/w11-join-domain/10-other-user.png)
+[domain login](./screenshots/w11-join-domain/10-other-user.png)
 
 ## 4. Verify login
 
@@ -101,6 +101,4 @@ You should see the username and domain as the logged in user!
 
 ### Congratulations. You've successfully joined a Windows VM to a domain.
 
-![verify joined domain](../../../screenshots/w11-join-domain/11-verify-login.png)
-
-
+![verify joined domain](./screenshots/w11-join-domain/11-verify-login.png)

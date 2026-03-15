@@ -99,8 +99,8 @@ Includes:
 - Troubleshooting Notes
 
 See: 
-1. [pfSense](pfSense/README.md) 
-2. [pfSense Setup](pfSense/setup/README.md)
+1. [pfSense](./pfSense/README.md) 
+2. [pfSense Setup](./pfSense/setup/README.md)
 
 ### Ubuntu
 Complete walkthrough on virtualizing Ubuntu.
@@ -111,7 +111,7 @@ Includes:
 - Screenshots included
 
 See: 
-1. [Ubuntu Setup](virtualization/ubuntu/README.md)
+1. [Ubuntu Setup](./virtualization/ubuntu/README.md)
 
 ### Windows Server 2025
 Complete walkthrough on virtualizing Windows Server 2025.
@@ -122,9 +122,9 @@ Includes:
 - Screenshots included
 
 See: 
-1. [Windows Server 2025 Setup](virtualization/windows-server-2025/README.md)
-2. [Active Directory](projects/enterprise-simulation/docs/active-directory/README.md)
-3. [Creating a Domain User](projects/enterprise-simulation/docs/active-directory/tasks/create-user.md)
+1. [Windows Server 2025 Setup](./virtualization/windows-server-2025/README.md)
+2. [Active Directory](./projects/enterprise-simulation/active-directory/README.md)
+3. [Creating a Domain User](./projects/enterprise-simulation/active-directory/tasks/create-user.md)
 
 ### Windows 11 VM
 Complete walkthrough on virtualizing Windows 11.
@@ -135,6 +135,5 @@ Includes:
 - Screenshots included
 
 See: 
-1. [Windows 11 Setup](virtualization/windows-11/README.md)
-2. [Joining W11 VM to Domain](./projects/enterprise-simulation/docs/active-directory/tasks/w11-join-domain.md)
-
+1. [Windows 11 Setup](./virtualization/windows-11/README.md)
+2. [Joining W11 VM to Domain](./projects/enterprise-simulation/windows-11-client/tasks/join-domain.md)
