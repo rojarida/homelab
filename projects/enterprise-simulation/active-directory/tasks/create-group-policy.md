@@ -58,8 +58,108 @@ On the domain controller:
 1. Open `Server Manager`.
 2. In the top right, click on `Tools`, and select `Group Policy Management`.
 
-This is console used to create, link, edit, and manage GPOs.
-
 > 01
 
+This is console used to create, link, edit, and manage GPOs.
+
+> 02
+
+### 2. Identify the target OU
+
+Before creating a GPO, determine where it should be applied.
+
+In this lab, the target OU for user policy testing is the `Sales` department.
+
+### 3. Create a new GPO
+
+1. In Group Policy Management, expand:
+
+    - `Forest: corp.example.com`
+    - `Domains`
+    - `corp.example.com`
+    - `Departments`
+
+2. Right click the target OU (`Sales`)
+3. Select `Create a GPO in this domain, and Link it here...`
+
+> 3
+
+4. Enter a descriptive name for the GPO
+
+    - I will be using: `Department User Baseline`
+
+    > 4
+
+### 4. Edit the GPO
+
+1. Right click the newly created GPO
+2. Select `Edit`
+
+> 5
+
+This opens the `Group Policy Management Editor`. This is where you configure the settings you want to apply.
+
+> 6
+
+### 5. Configure policy settings
+
+There's an extensive list of policy settings that can be configured. Take the time to look at the different settings that can be applied to both `User Configuration` and `Computer Configuration`.
+
+In this lab, I will be using the following policy settings:
+
+- `User Configuration`:
+    - `Prohibit access to Control Panel and PC settings`: Located `User Configuration > Policies > Administrative Templates > Control Panel`.
+
+        > 07
+        > 08
+
+    - `Prevent access to the command prompt`: Located `User Configuration > Policies > Administrative Templates > System`.
+
+        > 09
+
+    - `Desktop Wallpaper`: Located `User Configuration > Policies > Administrative Templates > Desktop > Desktop`.
+
+        > 10
+
+- `Computer Configuration`:
+    - `Do not display last signed-in user`: Located `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`.
+
+        > 11
+
+    - `Message text/title for users attempting to log on`: Located `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`.
+
+        > 12
+
+> [!note]
+> The reason for these policies is because it's easy to verify on a client VM. It demonstrates how Group Policy affects both user accounts and workstations.
+
+### 6. Confirm the GPO link
+
+After configuration, return to `Group Policy Management` and confirm that the GPO is linked to the intended OU.
+
+> [!tip]
+> A correctly configured GPO will only apply if correctly linked.
+> An example will be shown later.
+
+### 7. Confirm target object is in the correct OU
+
+The user or computer must exist in the OU where the GPO is linked. In this example, we only linked the GPO for the OU `Departments/Sales`. We created a `Workstations/Sales`, but we haven't linked the GPO.
+
+### 8. Update the policy on the client
+
+> [!warning]
+> Make sure the client is joined to the domain.
+> (See: [Join W11 VM to Domain](../../windows-11-client/tasks/join-domain.md))
+
+
+Sign in to the domain-joined client and run:
+
+```cmd
+gpupdate /force
+```
+
+Depending on the policy, Windows may require:
+
+- Logging back in
+- Reboot
 
