@@ -38,7 +38,7 @@ For example:
 - Domain: `corp.example.com`
 - Tools: `Group Policy Management Console (GPMC)`
 - Test OU: `Sales`
-- Test Client `WIN11-CLI-02`
+- Test Client `WIN11-CLIENT-02`
 
 ## Prerequisites
 
@@ -151,15 +151,135 @@ The user or computer must exist in the OU where the GPO is linked. In this examp
 > Make sure the client is joined to the domain.
 > (See: [Join W11 VM to Domain](../../windows-11-client/tasks/join-domain.md))
 
-
-Sign in to the domain-joined client and run:
+Sign in to the domain-joined client with an administrative account and run:
 
 ```cmd
 gpupdate /force
 ```
+
+> 13
 
 Depending on the policy, Windows may require:
 
 - Logging back in
 - Reboot
 
+> [!important]
+> Based on how we applied the GPO, what do you think will happen when restarting the client?
+
+### 9. Verify the GPO
+
+So, we linked the child OU `Sales` and the GPO `Department User Baseline`.
+
+This means that as of right now, only users in `Sales` OU will receive the GPO. We can verify that here:
+
+- Notice how Jill Estrada received the background wallpaper.
+- Jill Estrada is unable to open the command prompt.
+- Unable to open `Settings` or `Control Panel`.
+- Testing with another user in `Sales`, we noticed the same settings have applied.
+
+#### Now lets try logging in to the device with a user that's not in Sales
+
+We have Guillermo Mccall.
+
+- Does not have the background wallpaper.
+- Able to open command prompt.
+- Able to open `Settings`.
+- Able to open `Control Panel`.
+
+#### Notice how no Computer Configurations have been applied
+
+Because we didn't link the GPO to the workstation, `Computer Configuration` did not get applied.
+
+Lets link the workstation.
+
+1. Create the child OU for `Sales`.
+
+2. Move `WIN11-CLIENT-02` from the default `Computers` to `Workstations/Sales`.
+
+3. Go back to `Group Policy Management`.
+
+    1. Expand `corp.example.com`.
+    2. Expand `Workstations`.
+    3. Right click on `Sales`.
+    4. Select `Link an Existing GPO...`
+
+    > [!important]
+    > Splitting User Configuration and Computer Configuration is easier to manage.
+    >
+    > In this lab, we combined the two into a single GPO.
+
+    5. Select the GPO that we created.
+
+### Creating a Security Group
+
+Since we added a GPO for users in `Sales`, lets restrict the workstation so only users in `Sales` are authorized to access the workstation.
+
+In `Active Directory Users and Computers`:
+
+1. Right click `Groups` OU.
+2. Select `New`, then select `Group`.
+3. Give the security group a name. I used `Sales_Workstation_Users`.
+4. Group scope: `Global`.
+5. Group type: `Security`.
+6. Click `OK`.
+
+#### Add the users in Sales to the group
+
+While still in `ADUC`:
+
+1. Double click on `Sales_Workstation_Users`.
+2. Go to `Members`.
+3. Click `Add`.
+4. Add the users in `Sales`.
+
+#### Edit the GPO to allow only users from the Sales department
+
+In `Group Policy Management`:
+
+1. Expand:
+    
+    - `Forest: corp.example.com`
+    - `Domains`
+    - `corp.example.com`
+    - `Workstations`
+
+2. Click on `Sales`. You should see the GPO that we created.
+3. Right click the GPO and `Edit`.
+4. Locate `Allow log on locally` by following `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User Rights Assignment`.
+5. Add:
+    - `Administrators`
+    - `Sales_Workstation_Users`
+
+> [!caution]
+> Administrators must be included or else they will be locked out.
+
+#### Update policy on client
+
+On the `Sales` workstation, log in as an administrator then run:
+
+```cmd
+gpupdate /force
+```
+
+After restarting, you should notice the `Computer Configuration` that we created in the GPO.
+
+- The logon title/message should now appear
+- You no longer see last signed-in user in the bottom left.
+
+#### Only users in the Sales department can log into this workstation
+
+You can test this by logging in with a user in another department.
+
+## Congratulations!
+
+You've successfully implemented Group Policy in Active Directory!
+
+## Conclusion
+
+This document showed the full workflow of creating, linking, applying, and verifying Group Policy in Active Directory. By testing the policy on the `Sales` OU and a domain-joined client, it became easier to understand how `User Configuration` and `Computer Configuration` are applied based on where objects are located.
+
+This is also a good reminder that OUs and groups serve different purposes:
+
+- OUs: Organize objects and scope policy
+- Groups: Used to manage permissions and access.

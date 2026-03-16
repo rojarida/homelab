@@ -45,3 +45,12 @@ We will perform Option 2.
     ![ncpa cpl](./screenshots/troubleshooting/05-ncpa-cpl.png)
 
 3. The steps for setting a static IP address can be replicated in steps 3 - 5 [here.](./active-directory/README.md/#3-set-a-static-ip-address)
+## GPO Wallpaper Path
+
+When creating a GPO for changing the desktop wallpaper, I ran into an issue. I used a local path from the server. Because of this, the domain-joined client had a black background.
+
+The reason is because the client VM can't use the local filesystem path of the server.
+
+So instead, I used the `Universal Naming Convention (UNC)` path: `\Domain\NETLOGON`.
+
+![desktop wallpaper gpo](./screenshots/troubleshooting/06-gpo-desktop-wallpaper.png)
