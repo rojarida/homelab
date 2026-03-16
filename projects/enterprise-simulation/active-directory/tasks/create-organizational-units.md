@@ -58,11 +58,11 @@ The domain contains default built-in containers and folders such as:
 
 On the domain controller, open `Server Manager`. In the top right, click `Tools` and select `Active Directory Users and Computers`.
 
-> 01 Screenshot
+[select aduc](./screenshots/create-organizational-units/01-open-aduc.png)
 
 Once opened, expand the domain in the left pane to view the existing strcture.
 
-> 02 Screenshot
+[expand domain structure](./screenshots/create-organizational-units/02-aduc-window.png)
 
 ### 2. Create the parent OU for departments
 
@@ -71,17 +71,17 @@ Create a top-level OU named `Departments`.
 1. Right click the domain name: `corp.example.com`.
 2. Select `New`, then click `Organizational Unit`.
 
-> 03 Screenshot
+[create new organizational unit](./screenshots/create-organizational-units/03-create-new-ou.png)
 
 3. Enter the name: `Departments`
 4. Leave `Protect container from accidental deletion` enabled.
 5. Click `OK`.
 
-> 04 Screenshot
+[create departments ou](./screenshots/create-organizational-units/04-create-departments-ou.png)
 
 The `Departments` OU should now appear under the domain root.
 
-> 05 Screenshot
+[showing ou in domain root](./screenshots/create-organizational-units/05-ou-in-domain-root.png)
 
 ### 3. Create the child OUs for each department
 
@@ -90,17 +90,17 @@ Create a separate child OU under `Departments` for each department.
 1. Right click `Departments`.
 2. Select `New`, then click `Organizational Unit`.
 
-> 06 Screenshot
+[creating child ou](./screenshots/create-organizational-units/06-create-child-ou.png)
 
 3. Create a child for each department
 
-> 07 Screenshot
+[create child department ou](./screenshots/create-organizational-units/07-create-ou-department.png)
 
 4. Repeat for each department
 
 Each department OU will appear nested under the `Departments` parent OU. It should look similar to this:
 
-> 08 Screenshot
+[show nested ou](./screenshots/create-organizational-units/08-nested-departments.png)
 
 This structure keeps user accounts organized and makes it easier to manage department-based administration.
 
@@ -112,7 +112,7 @@ The steps are similar to creating the top-level OU for `Departments`.
 
 It should look like this at the end:
 
-> 09 Screenshot
+[show workstations ou](./screenshots/create-organizational-units/09-workstations-ou.png)
 
 This OU will be used to move joined client machines out of the default `Computers` container and into a cleaner structure.
 
@@ -124,7 +124,7 @@ The steps are similar to creating the top-level OU for `Departments` and `Workst
 
 It should look like this at the end:
 
-> 10 Screenshot
+[show groups ou](./screenshots/create-organizational-units/10-create-groups-ou.png)
 
 This OU will be used to store and organize security groups created for departments, permissions, or administrative purposes.
 
@@ -139,6 +139,6 @@ The domain now contains a simple OU structure that is easy to follow and expand.
 
 ## Closing Notes
 
-- The `Users` folder is a built-in container, not a standard OU
-- The `Computers` folder is a built-in container
+- The `Users` folder is a built-in container, not a standard OU.
+- The `Computers` folder is a built-in container.
 - For better organization, custom OUs should be created at the domain root.
