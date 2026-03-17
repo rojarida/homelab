@@ -8,6 +8,13 @@ This document covers the server-side configurations steps for the enterprise sim
 - I will be using the isolated virtual network: `192.168.40.0/24`.
     - DHCP is disabled.
 
+## Related
+
+- [Join a Windows 11 client](../windows-11-client/tasks/join-domain.md)
+- [Create a domain user](./tasks/create-user.md)
+- [Create Organizational Units](./tasks/create-organizational-units.md)
+- [Create Group Policy](./tasks/create-group-policy.md)
+
 ## Prerequisites
 
 Before continuing, confirm the following:
@@ -174,10 +181,3 @@ After you installed Active Directory Domain Services, you should see the domain 
 ## Congratulations!
 
 You've successfully configured Active Directory Domain Services and promoted the Windows Server VM to a domain controller for the `corp.example.com` enterprise simulation lab. The server can now provide centralized identity and directory services for the isolated environment.
-
-## Related
-
-- [Join a Windows 11 client](../windows-11-client/tasks/join-domain.md)
-- [Create a domain user](./tasks/create-user.md)
-- [Create Organizational Units](./tasks/create-organizational-units.md)
-- [Create Group Policy](./tasks/create-group-policy.md)
