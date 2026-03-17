@@ -179,3 +179,5 @@ You've successfully configured Active Directory Domain Services and promoted the
 
 - [Join a Windows 11 client](../windows-11-client/tasks/join-domain.md)
 - [Create a domain user](./tasks/create-user.md)
+- [Create Organizational Units](./tasks/create-organizational-units.md)
+- [Create Group Policy](./tasks/create-group-policy.md)
