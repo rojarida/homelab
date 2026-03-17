@@ -128,6 +128,7 @@ See:
 3. [Create Domain User](./projects/enterprise-simulation/active-directory/tasks/create-user.md)
 4. [Configure pfSense for Enterprise Simulation](./projects/enterprise-simulation/pfSense/README.md)
 5. [Create Organizational Units](./projects/enterprise-simulation/active-directory/tasks/create-organizational-units.md)
+6. [Create Group Policy](./projects/enterprise-simulation/active-directory/tasks/create-group-policy.md)
 
 ### Windows 11 VM
 Complete walkthrough on virtualizing Windows 11.
