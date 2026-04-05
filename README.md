@@ -102,6 +102,16 @@ See:
 1. [pfSense](./pfSense/README.md) 
 2. [pfSense Setup](./pfSense/setup/README.md)
 
+### RHEL
+Complete walkthrough for setting up a RHEL VM.
+
+Includes:
+- Automatic and Custom partitioning
+- Screenshots included
+
+See:
+1. [Red Hat Enterprise Linux](./virtualization/rhel/README.md)
+
 ### Ubuntu
 Complete walkthrough on virtualizing Ubuntu.
 
