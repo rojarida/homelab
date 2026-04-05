@@ -109,3 +109,100 @@ Before starting, ensure the following:
 - Once you've configured a user account and selected an installation destination, select `Begin Installation`
 
 ![begin installation](./screenshots/13-begin-installation.png)
+
+### Installation Complete
+
+- Once installation is complete, you may reboot the system.
+
+![installation complete](./screenshots/14-installation-complete.png)
+
+### Login Screen
+
+- Your user account should show up on the login screen.
+
+![login screen](./screenshots/15-login-screen.png)
+
+### Welcome Screen
+
+- You should be welcomed to RHEL.
+- Skip the welcome screen.
+
+![welcome screen](./screenshots/16-welcome-screen.png)
+
+### System Not Registered
+
+> ![important]
+> Do not register system.
+
+- Internet access is required to register system. During RHCSA, you have no internet access.
+
+## Installing with custom partitioning
+
+- The steps are exactly the same until you reach the summary installation.
+
+### Installation Destination (Custom Partitioning)
+
+- This time, select `Custom` for Storage Configuration.
+
+![custom storage configuration](./screenshots/18-custom-configuration.png)
+
+### Manual Partitioning
+
+- Change the partitioning scheme to `Standard Partition`.
+
+- You must now create mount points for critical Linux data.
+
+- Click the `+` sign to add a mount point.
+
+![add a new mount point](./screenshots/20-add-new-mount-point.png)
+
+#### /boot
+
+![boot mount](./screenshots/21-boot-mount.png)
+
+#### /boot/efi
+
+![boot/efi mount](./screenshots/22-boot-efi.png)
+
+> ![note]
+> Notice how the File System is EFI System Partition
+
+![efi system partition](./screenshots/23-efi-system-partition.png)
+
+#### root
+
+![root mount](./screenshots/24-root-mount.png)
+
+#### swap
+
+![swap mount](./screenshots/25-swap-mount.png)
+
+#### log
+
+![log mount](./screenshots/26-log-mount.png)
+
+#### biosboot
+
+![bios boot mount](./screenshots/27-bios-boot-mount.png)
+
+### Review Partitions
+
+![review partitions](./screenshots/28-review-partitions.png)
+
+### Summary of Changes
+
+![summary of changes](./screenshots/29-summary-of-partitions.png)
+
+### Installation Complete
+
+- Installation should be completed, select `Reboot System`.
+
+![installation complete](./screenshots/14-installation-complete.png)
+
+## Congratulations
+
+- You've successfully installed RHEL VM using automatic partitioning and custom partitioning!
+
+- Now go and have fun labbing with RHEL 10.
+
+![rhel desktop](./screenshots/30-main-screen.png)
