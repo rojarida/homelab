@@ -1,153 +1,42 @@
 # Homelab
 
-This repository documents my personal homelab: hardware, networking, virtualization, and infrastructure projects I build for learning, experimentation, and long-term reference.
+My current home infrastructure, built around a Dell OptiPlex 7050 SFF running Proxmox VE. The host runs 24/7, primarily to support an OPNsense VM that handles my home network and firewall.
 
-This homelab is centered around an Ubuntu-based home server, a virtualized pfSense router/firewall, local storage services, and a small home network that I can expand over time.
+Last updated: November 16, 2026.
 
-## Purpose
+## Network Overview
 
-This repository serves as:
-
-- Personal refrence for rebuilding and troubleshooting
-- Portfolio of practical infrastructure and networking projects
-- Place to document experiments before applying them to production
-
-## Focus
-
-- pfSense virtual router/firewall
-- Home network topology and documentation
-- Static addressing and DHCP reservations
-- VPN and remote access
-- Future VLAN segmentation
-- Future managed switching
-
-## Network Topology
 ```mermaid
 flowchart LR
-    ISP[ISP / Modem<br/>Arris Touchstone CM8200A] --> WAN[pfSense WAN<br/>Public IP via DHCP]
-
-    subgraph HOSTSYS[Ubuntu Host]
-        PF[pfSense VM]
+    INTERNET[Internet] --> WAN[WAN bridge]
+    subgraph HOST["Proxmox VE — OptiPlex 7050 SFF"]
+        WAN --> FW[OPNsense VM]
+        FW --> LAN[LAN bridge]
     end
-
-    WAN --> PF
-    PF --> LAN[pfSense LAN<br/>Gateway: 192.168.0.1/24]
-    LAN --> SW[TP-Link TL-SG105<br/>Unmanaged Switch]
-
-    SW --> UBUNTU[Ubuntu Host LAN<br/>Static IP: 192.168.0.200]
-    SW --> AP[TP-Link AXE95<br/>AP Mode<br/>Mgmt IP: 192.168.0.2]
-    SW --> CLIENTS[LAN Clients<br/>DHCP: 192.168.0.100-199]
+    LAN --> HOME[Home LAN]
+    HOME --> AP[AXE7800 Wi-Fi AP]
+    HOME --> CLIENTS[Home clients]
+    FW -. Separate zone .-> DMZ[DMZ]
 ```
 
-## Lab Hardware
+## Setup Overview
 
-### Main Workstation
+| Component | Role | Usage |
+|-----------|------|-------|
+| Proxmox VE | Hosts VMs and LXC containers on the OptiPlex 7050 SFF | 24/7 |
+| OPNsense VM | Primary router/firewall, DHCP, DNS, reservations, and separate DMZ | 24/7 |
+| TrueNAS SCALE VM | Mirrored storage, NFS, and authenticated SMB | 24/7 |
+| PXC Server VM | Network Boot Services | Normally off; started when needed |
+| Debian LXC | Local Development Web Server | Occasional |
+| AXE7800 AP | Home Wi-Fi | Regular Use |
 
-Dual-boot workstation with Linux Mint as the primary OS and Windows 11 for compatibility. Used for development, coursework, gaming, and general use.
 
-- Pre-built PC
-    - `Case`: Corsair 5000D AIRFLOW Mid-Tower ATX
-    - `Motherboard`: Gigabyte B550 GAMING X V2
-    - `CPU`: AMD Ryzen 7 5700X
-    - `RAM`: 32GB (2x16GB) DDR4 @ 3200 MHz
-    - `GPU`: AMD Radeon RX 6800XT 16GB VRAM
-    - `OS`:
-        - `Windows 11`: Western Digital Blue SN550 500GB
-        - `Linux Mint`: Samsung SSD 970 EVO Plus 1TB
+## Operating Notes
 
-- Peripherals
-    - `Monitor` 
-        - `Main`: Sceptre 27-inch 2560x1440 @ 144Hz
-        - `Secondary`: Asus VG248QE 1920x1080 @ 144Hz
-    - `Keyboard`: Logitech MX Keys S Wireless
-    - `Mouse`: Logitech MX Master 4 Wireless
-    - `Mousepad`: Glorious XXL Extended Black
+- OPNsense is the main everyday workload. Restarting its VM or the Proxmox host can interrupt home connectivity.
+- TrueNAS SCALE provides NFS and authenticated SMB shares to LAN clients.
+- Windows Server and other service experiments run in isolated lab environments.
 
-### Ubuntu Host
+## Archive
 
-Primary homelab server used for virtualization, NAS services, and hosting the pfSense router/firewall VM.
-
-- Dell OptiPlex 7050 SFF
-    - `Motherboard`: Dell 0NW6H5
-    - `CPU`: Intel i7-7700 @ 3.60GHz
-    - `RAM`: 24GB DDR4 (1x8GB + 2x8GB) @ 2133MHz
-    - `Boot Drive`: Micron 256GB SATA III M.2 2280
-    - `Storage Pool`: 2x PNY CS900 1TB (ZFS mirror)
-    - `Hypervisor`: QEMU/KVM with virt-manager
-        - `ISO`: pfSense CE (FreeBSD)
-
-### Networking Gear
-
-Core networking hardware used for routing, switching, and wireless access.
-
-- `Modem`: Arris Touchstone CM8200A
-- `Access Point`: TP-Link Archer AXE95
-- `Switch`: TP-Link TL-SG105 (**unmanaged**)
-- `NIC`: Intel I350-AM2 (dual-port)
-    - Dedicated WAN/LAN connectivity for pfSense VM
-
-## Projects
-
-### pfSense
-Virtualized router/firewall running on the Ubuntu Host.
-
-Includes:
-- VM Setup
-- WAN/LAN Design
-- LAN DHCP Configuration
-- AP Mode Migration
-- Troubleshooting Notes
-
-See: 
-1. [pfSense](./pfSense/README.md) 
-2. [pfSense Setup](./pfSense/setup/README.md)
-
-### RHEL
-Complete walkthrough for setting up a RHEL VM.
-
-Includes:
-- Automatic and Custom partitioning
-- Screenshots included
-
-See:
-1. [Red Hat Enterprise Linux](./virtualization/rhel/README.md)
-
-### Ubuntu
-Complete walkthrough on virtualizing Ubuntu.
-
-Includes:
-- QEMU/KVM and virt-manager installation
-- Full Ubuntu LTS VM setup
-- Screenshots included
-
-See: 
-1. [Ubuntu Setup](./virtualization/ubuntu/README.md)
-
-### Windows Server 2025
-Complete walkthrough on virtualizing Windows Server 2025.
-
-Includes:
-- Full Windows Server VM setup
-- Separate Active Directory documentation
-- Separate documentation for Active Directory tasks
-- Screenshots included
-
-See: 
-1. [Windows Server 2025 Setup](./virtualization/windows-server-2025/README.md)
-2. [Active Directory](./projects/enterprise-simulation/active-directory/README.md)
-3. [Create Domain User](./projects/enterprise-simulation/active-directory/tasks/create-user.md)
-4. [Configure pfSense for Enterprise Simulation](./projects/enterprise-simulation/pfSense/README.md)
-5. [Create Organizational Units](./projects/enterprise-simulation/active-directory/tasks/create-organizational-units.md)
-6. [Create Group Policy](./projects/enterprise-simulation/active-directory/tasks/create-group-policy.md)
-
-### Windows 11 VM
-Complete walkthrough on virtualizing Windows 11.
-
-Includes:
-- QEMU/KVM and virt-manager installation
-- Clean Windows 11 Installation
-- Screenshots included
-
-See: 
-1. [Windows 11 Setup](./virtualization/windows-11/README.md)
-2. [Joining W11 VM to Domain](./projects/enterprise-simulation/windows-11-client/tasks/join-domain.md)
+[Older projects and guides](archive/README.md) are preserved for reference. They document earlier setups, are no longer maintained, and may contain outdated instructions. This repository now focuses on documenting my current setup; future guides will be kept separately.
