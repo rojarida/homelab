@@ -57,7 +57,7 @@ Before starting, make sure the Ubuntu host has:
 - libvirt running properly
 - pfSense CE ISO downloaded
 
-If setting up virtualization from scratch, see: [Ubuntu VM Setup](../../virtualization/ubuntu-vm/README.md)
+If setting up virtualization from scratch, see: [Ubuntu VM Setup](../../virtualization/ubuntu/README.md)
 
 ## 1. Create the isolated lab networks
 

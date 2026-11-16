@@ -4,6 +4,8 @@
 
 These projects and walkthroughs document earlier homelab environments. They are preserved for reference, are no longer maintained, and may contain outdated instructions.
 
+Keep the archived guides and their screenshots together. Use relative links within the repository so they work both on GitHub and in a local checkout. Archive maintenance is limited to preserving access and fixing links; current setup documentation belongs outside this directory.
+
 ## Projects
 
 - [Earlier pfSense home router](pfSense/README.md)

@@ -24,7 +24,7 @@ For this setup, I will keep configuration simple and focus on:
 
 Before starting, ensure the following:
 
-- QEMU/KVM is installed on the host (see: [steps 1 - 4](https://github.com/rojarida/homelab/blob/main/virtualization/ubuntu/README.md#1-update-the-host))
+- QEMU/KVM is installed on the host (see: [steps 1 - 4](../ubuntu/README.md#1-update-the-host))
 - virt-manager is installed
 - Virtualization is enabled
 - Windows 11 ISO is downloaded

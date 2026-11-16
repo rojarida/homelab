@@ -1,5 +1,8 @@
 # Troubleshooting
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
+
 This document will show any issues with setting up the enterprise environment.
 
 ## Bypass `Connecting to Network`
@@ -44,7 +47,8 @@ We will perform Option 2.
 
     ![ncpa cpl](./screenshots/troubleshooting/05-ncpa-cpl.png)
 
-3. The steps for setting a static IP address can be replicated in steps 3 - 5 [here.](./active-directory/README.md/#3-set-a-static-ip-address)
+3. Follow the [Set a Static IP Address](./active-directory/README.md#set-a-static-ip-address) section of the Active Directory guide.
+
 ## GPO Wallpaper Path
 
 When creating a GPO for changing the desktop wallpaper, I ran into an issue. I used a local path from the server. Because of this, the domain-joined client had a black background.

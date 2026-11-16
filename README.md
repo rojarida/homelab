@@ -39,4 +39,4 @@ flowchart LR
 
 ## Archive
 
-[Older projects and guides](archive/README.md) are preserved for reference. They document earlier setups, are no longer maintained, and may contain outdated instructions. This repository now focuses on documenting my current setup; future guides will be kept separately.
+[Older projects and guides](archive/README.md) are preserved for reference. They document earlier setups, are no longer maintained, and may contain outdated instructions. This repository now focuses on my current setup, with documentation limited to important VMs and services and the operating notes needed to maintain them.
