@@ -1,5 +1,8 @@
 # pfSense Setup
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
+
 This document describes a similar process of how I set up `pfSense CE as a virtual router/firewall` on my Ubuntu home server using `QEMU/KVM and virt-manager`.
 
 > [!note]

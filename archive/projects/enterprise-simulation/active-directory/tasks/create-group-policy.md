@@ -1,5 +1,8 @@
 # Create Group Policy in Active Directory
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../../README.md) or the [archive index](../../../../README.md).
+
 ## Overview
 
 This document demonstrates the standard process of creating and applying Group Policy in an Active Directory environment.

@@ -1,5 +1,8 @@
 # Windows 11 Join Domain
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../../README.md) or the [archive index](../../../../README.md).
+
 This document covers how to join a Windows 11 VM to an Active Directory domain.
 
 At this point, the environment should have the following:

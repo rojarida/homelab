@@ -1,5 +1,8 @@
 # Active Directory
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../README.md) or the [archive index](../../../README.md).
+
 This document covers the server-side configurations steps for the enterprise simulation lab.
 
 > [!note]

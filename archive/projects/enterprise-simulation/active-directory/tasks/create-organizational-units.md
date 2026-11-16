@@ -1,5 +1,8 @@
 # Create Organizational Units
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../../README.md) or the [archive index](../../../../README.md).
+
 ## Overview
 
 This document demonstrates how to create a simple Organizational Unit (OU) structure in Active Directory Users and Computers (ADUC). In this lab, OUs are used to separate administrative areas by department and function.

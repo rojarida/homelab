@@ -1,5 +1,8 @@
 # Create User
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../../README.md) or the [archive index](../../../../README.md).
+
 This document shows how to create a new domain user in Active Directory on Windows Server. Then verify that the account can be used to sign in from a Windows client that joined the domain.
 
 ## Goal

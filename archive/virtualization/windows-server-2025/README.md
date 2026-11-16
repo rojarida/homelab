@@ -1,5 +1,8 @@
 # Windows Server 2025 VM Setup
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
+
 This document walks through creating and installing a fresh Windows Server 2025 virtual machine from scratch using `QEMU/KVM` and `virt-manager`.
 
 ## Goal

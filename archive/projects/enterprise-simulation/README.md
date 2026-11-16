@@ -1,43 +1,24 @@
 # Enterprise Simulation
 
-A homelab project for simulating a small enterprise environment using virtual machines.
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
 
-## Overview
+A historical lab for practicing small-enterprise infrastructure with virtual machines. Its documented topology used pfSense, Windows Server 2025, and Windows 11 clients under QEMU/KVM and virt-manager.
 
-This lab is designed to practice core enterprise infrastructure concepts in an isolated environment with controlled internet access.
+## Documented implementation
 
-The environment will use:
+| Area | Work recorded in the guides |
+| --- | --- |
+| Networking | [pfSense routing and DHCP](pfSense/README.md), with a NAT-connected WAN and an isolated lab LAN |
+| Identity and DNS | [Windows Server domain controller deployment](active-directory/README.md) |
+| Client integration | [Windows 11 domain join and sign-in](windows-11-client/tasks/join-domain.md) |
+| Administration | [Domain users](active-directory/tasks/create-user.md) and [Organizational Units](active-directory/tasks/create-organizational-units.md) |
+| Policy | [GPO scope and client verification](active-directory/tasks/create-group-policy.md), including comparisons across users and computer OUs |
+| Troubleshooting | [Addressing and wallpaper-path issues](troubleshooting.md) |
 
-- pfSense as the virtual router/firewall
-- Windows Server for domain services
-- Windows client VMs for joining domain and policy testing
+## Design and lessons
 
-## Goals
-
-- Build a small routed lab network
-- Deploy Active Directory, DNS, and related services
-- Join Windows clients to the domain
-- Practice user, group, and policy management
-- Troubleshooting enterprise networking and authentication issues
-- Document the full setup step by step
-
-## Planned Topology
-
-- `pfSense WAN`: Virtual NAT
-- `pfSense LAN`: Isolated lab network
-- `Windows Server`: Domain Services
-- `Windows Clients`: Domain-joined test machines
-
-## Scope
-
-This project is focused on:
-
-- Active Directory
-- DNS
-- DHCP
-- Group Policy
-- Joining Windows Clients to domain
-- Basic internal enterprise simulation
-
-> [!note]
-> This lab is meant for testing and learning. It is not intended for production use on home network.
+- pfSense supplied routing and DHCP; the domain controller supplied domain DNS and authentication. Domain clients needed DNS pointing to the domain controller.
+- The lab LAN was separate from the home LAN. A NAT-connected WAN provided upstream access; NAT alone is not proof that access to home networks was blocked.
+- User policy and computer policy depended on where the respective directory objects were located and where the GPO was linked.
+- A server-local wallpaper path failed on the client; a reachable UNC path resolved the documented issue.

@@ -1,5 +1,8 @@
 # Ubuntu VM Setup
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
+
 This document describes how I created a fresh `Ubuntu Virtal Machine` for homelab documentation, testing, and nested lab work.
 
 This VM is intended to serve as a clean baseline environment for projects such as:

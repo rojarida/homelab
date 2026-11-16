@@ -1,5 +1,8 @@
 # pfSense for Enterprise Simulation
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../../README.md) or the [archive index](../../../README.md).
+
 This documents how pfSense is configured for the `enterprise-simulation` lab.
 
 > [!note]

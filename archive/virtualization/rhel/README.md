@@ -1,5 +1,8 @@
 # Red Hat Enterprise Linux VM Setup
 
+> [!NOTE]
+> **Archived guide.** Retained for reference; no longer maintained. See [current setup](../../../README.md) or the [archive index](../../README.md).
+
 This documents walks through creating and installing a fresh RHEL VM from scratch using `QEMU/KVM` and `virt-manager`.
 
 ## Goal
