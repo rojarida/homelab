@@ -2,6 +2,8 @@
 
 [Hardware inventory](README.md)
 
+Proxmox virtualization host running 24/7, including the home network's OPNsense router/firewall VM.
+
 | Component | Specification |
 |-----------|---------------|
 | CPU | Intel Core i7-7700 |
@@ -10,4 +12,4 @@
 | Storage | 2 × PNY CS900 1 TB SATA SSD; 1 × MTFDDAV256TBN-1AR15ABHA 256 GB SATA SSD |
 | Motherboard | Dell 0NW6H5 |
 | Networking | Intel I219-LM Gigabit Ethernet; Intel I350 dual-port Gigabit Ethernet |
-| OS | Proxmox VE (Debian GNU/Linux 13, trixie) |
+| Hypervisor | Proxmox VE (Debian GNU/Linux 13, trixie) |
