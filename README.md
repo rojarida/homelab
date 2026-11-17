@@ -4,6 +4,10 @@ My current home infrastructure, built around a Dell OptiPlex 7050 SFF running Pr
 
 Last updated: November 16, 2026.
 
+## Hardware
+
+[Machine specifications](docs/hardware/README.md) for the OptiPlex host and personal desktop.
+
 ## Network Overview
 
 ```mermaid
